@@ -1,0 +1,151 @@
+#Project
+
+#Welcome
+
+import pyfiglet
+from prettytable import PrettyTable
+a = input("Enter your name-\n")
+b = '             Welcome\n' + "             "+a
+c = pyfiglet.figlet_format(b, font='digital')
+d = '        ZB'
+print(c, '\n', pyfiglet.figlet_format(d, font='serifcap'),"                 z-Base")
+
+#Options to exit or continue
+
+e = input("Click c to Continue or any other key to Exit\n")
+if e == 'c' or e == 'C':
+
+#options to create ZBase or see existing ZBase
+  
+  print(pyfiglet.figlet_format('Please Select',font='digital'),
+    pyfiglet.figlet_format(
+      'Create a new ZBase---1\n',
+      font='digital'))
+  f = int(input("Enter the Option No.-\n"))
+  if f==1:    
+    p=input("Enter the name of your ZBase-\n")
+    q=[]
+    q.append(p)
+    print("Your list=",q)
+
+#options to create a list manually or automated
+    
+    print(pyfiglet.figlet_format('Select Modes', font='digital'),pyfiglet.figlet_format('Automated-1\nManual-2', font='serifcap'),'\nAutomated consists of 5 rows and 5 coloums\nRows-Name of Employee,Post,Salary(Paid or Not),Worktime,Leaves(Regular or not)\nRows-Employees')
+    g=int(input("Enter the option No.-\n"))
+    if g==1:
+      
+      
+#Automated
+      
+      h=PrettyTable()
+      h.field_names=['Name','Post','Salary','Paid or Not','WorkTime','Leaves Taken','Leaves Left']
+      for i in range(1,6):
+        aa=input("Enter the Name-")
+        ab=input("Enter Post-")
+        ac='$'+input("Enter Salary-")
+        ad=input("Paid or not(yes-y or No-n)-")
+        ae=int(input("Enter Worktime(Hours)-"))
+        af=int(input("Enter Leaves Taken-"))
+        ag=int(input("Enter Leaves Left-"))
+        h.add_row([aa,ab,ac,ad,ae,af,ag])
+      print(h)
+    if g==2:
+      
+#Manual
+      
+      l=PrettyTable()
+      l.field_names=eval(input("Enter Coloumns(max-10)-"))
+      m=int(input("Enter no. of employees,students,etc-"))
+      z=len(l.field_names)
+      for i in range(m):
+        if z==1:
+          aaa=input(l.field_names[0])
+          l.add_row([aaa])
+        print(l) 
+        if z==2:
+          aaa=input(l.field_names[0])
+          aab=input(l.field_names[1])
+          l.add_row([aaa,aab])
+        print(l)
+        if z==3:
+          aaa=input(l.field_names[0])
+          aab=input(l.field_names[1])
+          aac=input(l.field_names[2])
+          l.add_row([aaa,aab,aac])
+        print(l)
+        if z==4:
+          aaa=input(l.field_names[0])
+          aab=input(l.field_names[1])
+          aac=input(l.field_names[2])
+          aad=input(l.field_names[3])
+          l.add_row([aaa,aab,aac,aad])
+        print(l)
+        if z==5:
+          aaa=input(l.field_names[0])
+          aab=input(l.field_names[1])
+          aac=input(l.field_names[2])
+          aad=input(l.field_names[3])
+          aae=input(l.field_names[4])
+          l.add_row([aaa,aab,aac,aad,aae])
+        print(l)
+        if z==6:
+          aaa=input(l.field_names[0])
+          aab=input(l.field_names[1])
+          aac=input(l.field_names[2])
+          aad=input(l.field_names[3])
+          aae=input(l.field_names[4])
+          aaf=input(l.field_names[5])
+          l.add_row([aaa,aab,aac,aad,aae,aaf])
+        print(l)
+        if z==7:
+          aaa=input(l.field_names[0])
+          aab=input(l.field_names[1])
+          aac=input(l.field_names[2])
+          aad=input(l.field_names[3])
+          aae=input(l.field_names[4])
+          aaf=input(l.field_names[5])
+          aag=input(l.field_names[6])
+          l.add_row([aaa,aab,aac,aad,aae,aaf,aag])
+        print(l)
+        if z==8:
+          aaa=input(l.field_names[0])
+          aab=input(l.field_names[1])
+          aac=input(l.field_names[2])
+          aad=input(l.field_names[3])
+          aae=input(l.field_names[4])
+          aaf=input(l.field_names[5])
+          aag=input(l.field_names[6])
+          aah=input(l.field_names[7])
+          l.add_row([aaa,aab,aac,aad,aae,aaf,aag,aah])
+        print(l)
+        if z==9:
+          aaa=input(l.field_names[0])
+          aab=input(l.field_names[1])
+          aac=input(l.field_names[2])
+          aad=input(l.field_names[3])
+          aae=input(l.field_names[4])
+          aaf=input(l.field_names[5])
+          aag=input(l.field_names[6])
+          aah=input(l.field_names[7])
+          aai=input(l.field_names[8])
+          l.add_row([aaa,aab,aac,aad,aae,aaf,aag,aah,aai])
+        print(l)
+        if z==10:
+          aaa=input(l.field_names[0])
+          aab=input(l.field_names[1])
+          aac=input(l.field_names[2])
+          aad=input(l.field_names[3])
+          aae=input(l.field_names[4])
+          aaf=input(l.field_names[5])
+          aag=input(l.field_names[6])
+          aah=input(l.field_names[7])
+          aai=input(l.field_names[8])
+          aaj=input(l.field_names[9])
+          l.add_row([aaa,aab,aac,aad,aae,aaf,aag,aah,aai,aaj])
+        print(l)
+        if z>10 and z<1:
+          print("Invalid no. of field no, please enter between 1-10")
+  else:
+    print('We are sorry! This will be updated as soon as possible')
+
+#Thank You
